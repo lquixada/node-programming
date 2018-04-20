@@ -1,0 +1,4 @@
+hash-sync
+Requests per second:    0.20 [#/sec] (mean)
+hash-async
+Requests per second:    577.38 [#/sec] (mean)
