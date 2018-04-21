@@ -13,20 +13,14 @@ function hashAsync(password, cb) {
   const hash = crypto.pbkdf2(password, salt, 10000, 512, 'sha512', cb);
 }
 
-app.get('/sync', (req, res) => {
-  for (let i = 0; i < 50; i++) {
-    hash('random_password');
-  }
-
-  res.send('Done!\n');
-});
-
-app.get('/async', (req, res) => {
-  for (let i = 0; i < 50; i++) {
-    hashAsync('random_password', f => f);
-  }
-
-  res.send('Done!\n');
-});
-
-app.listen(8000, () => console.log('Example app listening on port 8000!'))
+app
+  .get('/sync', (req, res) => {
+    hashSync('random_password');
+    res.send('Done!\n');
+  })
+  .get('/async', (req, res) => {
+    hashAsync('random_password', () => {
+      res.send('Done!\n');
+    });
+  })
+  .listen(8000);
