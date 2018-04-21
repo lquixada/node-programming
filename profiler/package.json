@@ -8,6 +8,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "express": "4.16.3"
+    "express": "4.16.3",
+    "v8-profiler": "^5.7.0"
   }
 }
