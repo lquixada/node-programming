@@ -1,5 +1,10 @@
+// const fs = require('fs');
 const crypto = require('crypto');
 const express = require('express');
+
+// const profiler = require('v8-profiler');
+// profiler.startProfiling();
+
 const app = express();
 
 function hashSync(password) {
@@ -24,3 +29,12 @@ app
     });
   })
   .listen(8000);
+
+// process.on('SIGINT', (code) => {
+//   const profile1 = profiler.stopProfiling();
+//   profile1.export(function(error, result) {
+//     fs.writeFileSync('profile2.cpuprofile', result);
+//     profile1.delete();
+//     process.exit();
+//   });
+// });

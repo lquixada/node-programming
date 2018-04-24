@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "clinic:clean": "clinic clean",
+    "clinic:isprime": "clinic doctor --on-port 'autocannon -p 100 -c 10 http://localhost:8000/root/?n=131071' -- node isprime",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "0x": "^4.0.9",
+    "autocannon": "^2.2.0",
+    "clinic": "^0.8.1",
     "express": "4.16.3",
     "v8-profiler": "^5.7.0"
   }
