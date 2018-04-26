@@ -11,10 +11,10 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "0x": "^4.0.9",
-    "clinic": "^0.8.1",
+    "0x": "4.0.9",
+    "clinic": "0.8.1",
     "express": "4.16.3",
-    "mkdirp": "^0.5.1",
-    "v8-profiler": "^5.7.0"
+    "mkdirp": "0.5.1",
+    "v8-profiler": "5.7.0"
   }
 }
