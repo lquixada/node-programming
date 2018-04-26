@@ -3,17 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "pre0x:isprime": "mkdirp .reports/0x/isprime-root",
     "clinic:clean": "clinic clean",
-    "clinic:isprime": "clinic doctor --on-port 'autocannon -p 100 -c 10 http://localhost:8000/root/?n=131071' -- node isprime",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clinic:isprime": "clinic doctor --on-port 'wrk -t1 -c2 http://localhost:8000/root/?n=131071' -- node isprime",
+    "0x:isprime": "0x -P 'wrk -t1 -c2 http://127.0.0.1:8000/root/?n=131071' --output-dir='.reports/0x/isprime-root' isprime"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "0x": "^4.0.9",
-    "autocannon": "^2.2.0",
     "clinic": "^0.8.1",
     "express": "4.16.3",
+    "mkdirp": "^0.5.1",
     "v8-profiler": "^5.7.0"
   }
 }
