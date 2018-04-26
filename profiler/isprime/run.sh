@@ -13,11 +13,11 @@ N=131071
 node $SERVER & sleep 5
 
 echo -n "Benchmarking isprime-root..."
-PUNCH=$(wrk -t1 -c2 http://127.0.0.1:8000/root/?n=${N} | grep "Requests/sec:" | tr -d "Requests/sec:");
+PUNCH=$(wrk http://127.0.0.1:8000/root/?n=${N} | grep "Requests/sec:" | tr -d "Requests/sec:");
 echo "${PUNCH} req/s"
 
 echo -n "Benchmarking isprime-minus..."
-PUNCH=$(wrk -t1 -c2 http://127.0.0.1:8000/minus/?n=${N} | grep "Requests/sec:" | tr -d "Requests/sec:")
+PUNCH=$(wrk http://127.0.0.1:8000/minus/?n=${N} | grep "Requests/sec:" | tr -d "Requests/sec:")
 echo "${PUNCH} req/s"
 
 pkill -f $SERVER

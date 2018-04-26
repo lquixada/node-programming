@@ -6,8 +6,8 @@
     "pre0x:isprime": "mkdirp .reports/0x/isprime-root",
     "preclinic:isprime": "mkdirp .reports/clinic/isprime-root",
     "clinic:clean": "clinic clean",
-    "clinic:isprime": "clinic doctor --output-dir='.reports/clinic/isprime-root' --on-port 'wrk -t1 -c2 http://localhost:8000/root/?n=131071' -- node isprime",
-    "0x:isprime": "0x -P 'wrk -t1 -c2 http://127.0.0.1:8000/root/?n=131071' --output-dir='.reports/0x/isprime-root' isprime"
+    "clinic:isprime": "clinic doctor --output-dir='.reports/clinic/isprime-root' --on-port 'wrk http://localhost:8000/root/?n=131071' -- node isprime",
+    "0x:isprime": "0x -P 'wrk http://127.0.0.1:8000/root/?n=131071' --output-dir='.reports/0x/isprime-root' isprime"
   },
   "author": "",
   "license": "MIT",
