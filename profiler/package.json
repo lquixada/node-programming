@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "preclinic:isprime": "mkdirp .reports/clinic/isprime-root",
+    "preclinic:doctor:isprime": "mkdirp .reports/doctor/isprime-root",
+    "preclinic:flame:isprime": "mkdirp .reports/flame/isprime-root",
     "clinic:clean": "clinic clean",
-    "clinic:isprime": "clinic doctor --output-dir='.reports/clinic/isprime-root' --on-port 'wrk http://localhost:8000/root/?n=131071' -- node isprime",
-    "clinic:flame:isprime": "clinic flame --on-port 'wrk http://localhost:8000/root/?n=131071' -- node isprime"
+    "clinic:doctor:isprime": "clinic doctor --output-dir='.reports/doctor/isprime-root' --on-port 'wrk http://localhost:8000/root/?n=131071' -- node isprime",
+    "clinic:flame:isprime": "clinic flame --output-dir='.reports/flame/isprime-root' --on-port 'wrk http://localhost:8000/root/?n=131071' -- node isprime"
   },
   "author": "",
   "license": "MIT",
