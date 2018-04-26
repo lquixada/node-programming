@@ -18,6 +18,8 @@ function hashAsync(password, cb) {
   const hash = crypto.pbkdf2(password, salt, 10000, 512, 'sha512', cb);
 }
 
+let counter = 0;
+
 app
   .get('/sync', (req, res) => {
     hashSync('random_password');

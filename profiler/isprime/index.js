@@ -33,6 +33,10 @@ function isPrimeRoot(n) {
 }
 
 app
-  .get('/minus', (req, res) => res.send(isPrimeMinus(req.query.n)+'\n'))
-  .get('/root', (req, res) => res.send(isPrimeRoot(req.query.n)+'\n'))
+  .get('/minus', (req, res) => {
+    res.send(isPrimeMinus(req.query.n)+'\n')
+  })
+  .get('/root', (req, res) => {
+    res.send(isPrimeRoot(req.query.n)+'\n')
+  })
   .listen(8000);
