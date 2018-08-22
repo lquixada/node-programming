@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "clinic": "0.8.1",
+    "clinic": "1.1.0",
     "express": "4.16.3",
     "mkdirp": "0.5.1",
     "v8-profiler": "5.7.0"
